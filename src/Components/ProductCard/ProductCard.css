@@ -1,0 +1,140 @@
+.pc__card {
+  border: 1px solid var(--faded-border-color);
+  border-radius: 10px;
+  border: 1px solid var (--pc-border-color);
+  max-width: 60rem;
+  margin-bottom: 1rem;
+}
+
+.pc__card:last-of-type {
+  margin-bottom: 0;
+}
+
+.pc__cardheader,
+.pc__cardfooter {
+  min-height: 2em;
+}
+
+.pc__cardheader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light-color-faded);
+  border-bottom: 1px solid var(--faded-border-color);
+}
+
+.pc__cardheader img {
+  align-self: center;
+}
+
+.pc__alignleft {
+  justify-self: start;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-left: 10px;
+}
+
+.pc__alignleft img {
+  margin-inline: 5px;
+}
+
+.pc__alignright {
+  justify-self: flex-end;
+  margin-right: 10px;
+}
+
+.pc__reduce {
+  display: none;
+}
+
+.pc__grow {
+  flex: 1;
+}
+
+.pc__shrink {
+  flex: 0;
+}
+
+.pc__productname {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.75em;
+  align-self: center;
+}
+
+.pc__cardbody {
+  min-height: 4em;
+  font-style: italic;
+  margin-inline: 10px;
+}
+
+.pc__cardbody p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.pc__cardfooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--light-color-faded);
+  border-top: 1px solid var(--faded-border-color);
+}
+
+.pc__lowstock {
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+  color: red;
+}
+
+.pc__addbutton {
+  border-radius: 5px;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  margin: 3px 5px;
+  font-size: 0.75em;
+  cursor: pointer;
+}
+
+.pc__addbutton:hover {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-weight: 700;
+  box-shadow: 3px 3px 5px var(--dark-color);
+}
+
+.pc__disco {
+  font-family: "Arima Madurai", Roboto, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: red;
+  font-style: italic;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pc__buttoncontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media screen and (min-width: 700px) {
+  .pc__reduce {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .pc__cardheader {
+    flex-direction: row;
+  }
+
+  .pc__productname {
+    font-size: 1em;
+  }
+}

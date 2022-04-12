@@ -1,0 +1,77 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"); /* sans-serif */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"); /* serif */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"); /* monospaced */
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;700&display=swap"); /* fancy */
+
+:root {
+  /* green pallette from https://colordesigner.io/#00261C-044D29-168039-45BF55-96ED89 */
+  --light-color: hsl(112 73% 73%);
+  --light-color-faded: hsl(112 73% 73%/0.2);
+  --base-color: hsl(128 49% 51%);
+  --accent-color: hsl(140 71% 29%);
+  --dark-color: hsl(150 90% 16%);
+  --black-color: hsl(164 100% 6%);
+  --white-color: hsl(165 100% 94%);
+  --faded-border-color: rgba(0, 0, 0, 0.2);
+}
+
+html,
+body {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--white-color);
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+  flex: 1;
+  position: absolute;
+  top: 3rem;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+main .sidebar {
+  flex: 0;
+}
+
+main .body {
+  flex: 1;
+}
+
+.icon-loading {
+  animation: spin 1.5s linear infinite;
+}
+
+.homebutton {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.homebutton a {
+  padding: 3px 5px;
+  border: 1px solid var(--black-color);
+  border-radius: 5px;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.homebutton a:hover {
+  box-shadow: 3px 3px 5px var(--dark-color);
+}

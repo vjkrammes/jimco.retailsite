@@ -1,0 +1,31 @@
+.pc__pricecontainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.pc__price {
+  color: blue;
+}
+
+.pc__promotion {
+  color: green;
+  font-style: italic;
+  display: flex;
+  flex-direction: row;
+}
+
+.pc__reduce {
+  display: none;
+}
+
+.pc__oldprice {
+  color: gray;
+  text-decoration: line-through;
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 700px) {
+  .pc__reduce {
+    display: inline-flex;
+  }
+}

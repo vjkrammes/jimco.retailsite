@@ -1,0 +1,83 @@
+header {
+  flex: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-color);
+  color: var(--black-color);
+}
+
+header .header-logo {
+  display: none;
+}
+
+header .header-logo a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+
+header .header-logo a:visited {
+  color: var(--black-color);
+}
+
+header .header-logo img {
+  height: 2rem;
+  max-height: 2rem;
+}
+
+header .logotitle {
+  align-self: center;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+.searchwidget {
+  flex: 0;
+}
+
+.myorders {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 50%;
+  padding: 3px 5px;
+  border: 1px solid var(--black-color);
+  border-radius: 5px;
+  max-height: 85%;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  text-align: center;
+  text-decoration: none;
+}
+
+.myorders:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+}
+
+.cartwidget {
+  flex: 0;
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    gap: 10px;
+  }
+
+  .myorders:hover {
+    box-shadow: 1px 3px 5px var(--black-color);
+  }
+
+  header .header-logo {
+    display: inline-flex;
+    flex: 0.1;
+    margin-left: 10px;
+  }
+}

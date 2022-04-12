@@ -1,0 +1,29 @@
+.disclaimerpage {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.disclaimerheader {
+  margin-top: 1rem;
+  text-align: center;
+  border: 3px solid var(--black-color);
+  background: linear-gradient(to right, lightgreen, lightblue);
+  box-shadow: 3px 3px 5px var(--dark-color);
+  margin-bottom: 2rem;
+}
+
+.fixedfont {
+  font-family: "Space Mono", "Courier New", Courier, monospace;
+  color: var(--dark-color);
+}
+
+@media screen and (min-width: 700px) {
+  .disclaimerpage {
+    max-width: 60rem;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}

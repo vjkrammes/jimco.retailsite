@@ -1,0 +1,47 @@
+.aboutpage {
+  overflow: scroll;
+}
+
+.aboutheader {
+  margin-top: 1rem;
+  text-align: center;
+  border: 3px solid var(--black-color);
+  background: linear-gradient(to right, lightgreen, lightblue);
+  box-shadow: 3px 3px 5px var(--dark-color);
+  margin-bottom: 2rem;
+}
+
+.aboutitem {
+  list-style-type: square;
+}
+
+.aboutpage a {
+  border: 1px solid var(--accent-color);
+  padding: 1px 3px;
+  text-decoration: none;
+}
+
+.aboutpage a:hover {
+  background-color: var(--light-color);
+}
+
+.aboutpage a,
+.aboutpage a:visited {
+  color: var(--dark-color);
+}
+
+@media screen and (min-width: 700px) {
+  .aboutpage {
+    overflow: hidden;
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}

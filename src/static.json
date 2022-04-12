@@ -1,0 +1,72 @@
+{
+  "address": [
+    "100 West Harambe Memorial Pkwy",
+    "South Niflheim, TN, 37999",
+    "In the Towne Centre Mall"
+  ],
+  "apiBase": "https://localhost:5011/api/v1/",
+  "cartCookie": "JimCoRetailCart",
+  "emailAddresses": [
+    {
+      "description": "Contact",
+      "address": "daymanager@jimco.online"
+    },
+    {
+      "description": "Employment",
+      "address": "hr@jimco.online"
+    },
+    {
+      "description": "Daily Specials",
+      "address": "specials@jimco.online"
+    }
+  ],
+  "lowQuantity": 10,
+  "phoneNumbers": [
+    {
+      "description": "Phone",
+      "number": "615-55-JIMCO"
+    },
+    {
+      "description": "Emergencies",
+      "number": "615-555-2115"
+    },
+    {
+      "description": "Employment Opportunities",
+      "number": "615-55-JCJOB"
+    },
+    {
+      "description": "Fax",
+      "number": "615-55-JCFAX"
+    }
+  ],
+  "storeHours": [
+    {
+      "day": "Sunday",
+      "hours": "Noon - 6PM"
+    },
+    {
+      "day": "Monday",
+      "hours": "10AM - 10PM"
+    },
+    {
+      "day": "Tuesday",
+      "hours": "10AM - 10PM"
+    },
+    {
+      "day": "Wednesday",
+      "hours": "10AM - 10PM"
+    },
+    {
+      "day": "Thursday",
+      "hours": "10AM - 10PM"
+    },
+    {
+      "day": "Friday",
+      "hours": "10AM - 10PM"
+    },
+    {
+      "day": "Saturday",
+      "hours": "10AM - 8PM"
+    }
+  ]
+}

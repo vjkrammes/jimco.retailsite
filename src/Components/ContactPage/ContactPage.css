@@ -1,0 +1,97 @@
+.page {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.contactheading {
+  text-align: center;
+  border: 3px solid var(--black-color);
+  background: linear-gradient(to right, lightgreen, lightblue);
+  box-shadow: 3px 3px 5px var(--dark-color);
+  margin-bottom: 2rem;
+}
+
+.optional {
+  display: none;
+}
+
+.boxme {
+  border: 2px solid var(--black-color);
+  margin-top: 1rem;
+  font-size: 75%;
+}
+
+.smallheader {
+  margin-bottom: 1rem;
+  border-bottom: 1px dotted var(--black-color);
+  text-align: center;
+}
+
+.listtable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.listtable tr {
+  border-bottom: 1px solid var(--dark-color);
+}
+
+.listtable tr:last-of-type {
+  border-bottom: none;
+}
+
+.mapcontainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.map {
+  margin-left: 1rem;
+  flex: 0;
+  justify-self: left;
+  cursor: not-allowed;
+}
+
+.address {
+  flex: 1;
+  justify-self: right;
+  align-self: center;
+  font-size: 120%;
+}
+
+@media screen and (min-width: 900px) {
+  .page {
+    margin-inline: 2rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 150%;
+    overflow: hidden;
+  }
+
+  .contactpage {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+  }
+
+  .boxme {
+    margin-top: 0;
+    padding: 0 1rem;
+  }
+
+  .map {
+    display: inline-flex;
+    flex: 0.5;
+    max-width: 50%;
+    height: auto;
+  }
+
+  .address {
+    flex: 0.5;
+    margin-left: 1rem;
+  }
+}

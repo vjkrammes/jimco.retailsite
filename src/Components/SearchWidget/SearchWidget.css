@@ -1,0 +1,33 @@
+.searchform {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.searchtext {
+  flex: 1;
+  position: relative;
+}
+
+.searchbutton {
+  flex: 0;
+  margin-left: 2px;
+  padding: 0px 5px;
+  border: 1px solid var(--dark-color);
+  border-radius: 5px;
+  color: var(--accent-color);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.disabledlink {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 700px) {
+  .searchbutton {
+    margin-left: 10px;
+  }
+}
