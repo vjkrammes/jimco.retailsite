@@ -41,9 +41,9 @@ export default function CheckoutPage() {
   }
 
   function Increase(productId: string) {
-    var item = cart.items?.find((x) => x.productId === productId);
+    let item = cart.items?.find((x) => x.productId === productId);
     if (item) {
-      var q = getQuantity(productId);
+      let q = getQuantity(productId);
       if (item.quantity < q) {
         item.quantity++;
         updateCart();
@@ -54,7 +54,7 @@ export default function CheckoutPage() {
   }
 
   function Decrease(productId: string) {
-    var item = cart.items?.find((x) => x.productId === productId);
+    let item = cart.items?.find((x) => x.productId === productId);
     if (item) {
       if (item.quantity > 1) {
         item.quantity--;
@@ -94,9 +94,9 @@ export default function CheckoutPage() {
   }
 
   function calculateTotal() {
-    var total = 0;
+    let total = 0;
     if (cart && cart.items && cart.items.length > 0) {
-      for (var i = 0; i < cart.items.length; i++) {
+      for (let i = 0; i < cart.items.length; i++) {
         const itemprice = cart.items[i].price * cart.items[i].quantity;
         total += itemprice;
       }
@@ -108,7 +108,7 @@ export default function CheckoutPage() {
     const doGetProduct = async () => {
       const prods: { [key: string]: IProduct } = {};
       if (cart !== null) {
-        for (var i = 0; i < cart!.items!.length; i++) {
+        for (let i = 0; i < cart!.items!.length; i++) {
           if (cart.items !== null && cart.items[i] !== null) {
             const prodid = cart.items[i].productId;
             const prod = await getProduct(prodid);

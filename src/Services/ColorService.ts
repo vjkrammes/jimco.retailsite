@@ -150,7 +150,7 @@ export function getHex(name: string): string {
   }
   const colors: { [key: string]: number } = {};
   sources.forEach((x) => {
-    var [name, hex] = x.split("=");
+    let [name, hex] = x.split("=");
     if (!colors[name]) {
       colors[name] = Number("0x" + hex.slice(2));
     }

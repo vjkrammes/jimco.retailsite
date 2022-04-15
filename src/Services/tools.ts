@@ -14,9 +14,9 @@ export function randomFromInterval(min: number, max: number) {
 
 const digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 export function generateSku(length: number) {
-  var builder = [];
+  let builder = [];
   for (let i = 0; i < length; i++) {
-    var ix = 0;
+    let ix = 0;
     if (i === 0) {
       ix = randomFromInterval(1, 9);
     } else {
@@ -56,7 +56,7 @@ export function GenerateLoremIpsum(
           ? minWords
           : randomFromInterval(minWords, maxWords);
       for (let w = 0; w < numWords; w++) {
-        var word = words[Math.floor(Math.random() * words.length)];
+        let word = words[Math.floor(Math.random() * words.length)];
         if (w === 0) {
           word = word.charAt(0).toUpperCase() + word.slice(1);
         }

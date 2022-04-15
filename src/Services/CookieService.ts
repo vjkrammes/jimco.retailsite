@@ -10,7 +10,7 @@ export function getCookie(key: string): string {
   const prefix = key + "=";
   const cookies = decodeURIComponent(document.cookie);
   const parts = cookies.split(";");
-  for (var i = 0; i < parts.length; i++) {
+  for (let i = 0; i < parts.length; i++) {
     let part = parts[i];
     while (part.charAt(0) === " ") {
       part = part.substring(1);

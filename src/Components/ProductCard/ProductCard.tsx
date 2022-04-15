@@ -20,8 +20,8 @@ function addToCart(
   if (cart.items === null) {
     cart.items = [];
   }
-  var newCart: ICart;
-  var existing = cart.items?.find((x) => x.productId === product.id);
+  let newCart: ICart;
+  let existing = cart.items?.find((x) => x.productId === product.id);
   if (existing !== null && existing !== undefined) {
     existing.quantity += quantity;
     newCart = {
@@ -30,7 +30,7 @@ function addToCart(
       items: cart.items,
     };
   } else {
-    var newitems = cart.items;
+    let newitems = cart.items;
     newitems?.push({
       productId: product.id,
       quantity: quantity,

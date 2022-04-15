@@ -18,9 +18,9 @@ export default function OrderDetail({ order }: Props) {
   }
   const [totalCost, setTotalCost] = useState<number>(0);
   useEffect(() => {
-    var total = 0;
+    let total = 0;
     if (order && order.lineItems && order.lineItems.length > 0) {
-      for (var i = 0; i < order.lineItems.length; i++) {
+      for (let i = 0; i < order.lineItems.length; i++) {
         total += order.lineItems[i].quantity * order.lineItems[i].price;
       }
     }

@@ -18,9 +18,9 @@ export default function CartWidget() {
     navigate(newPath);
   }
   useEffect(() => {
-    var cartcookie = getCookie(AppSettings.cartCookie);
+    let cartcookie = getCookie(AppSettings.cartCookie);
     if (cartcookie !== "") {
-      var cart: ICart = JSON.parse(cartcookie);
+      let cart: ICart = JSON.parse(cartcookie);
       setCart({
         created: cart.created,
         updated: cart.updated,

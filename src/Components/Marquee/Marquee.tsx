@@ -22,7 +22,7 @@ export default function Marquee() {
     const interval = setInterval(() => {
       setWords(GenerateLoremIpsum(10, 15, 1, 2, 1));
       const oldcolor = color;
-      var newcolor = colors[randomFromInterval(0, colors.length - 1)];
+      let newcolor = colors[randomFromInterval(0, colors.length - 1)];
       while (oldcolor === newcolor) {
         newcolor = colors[randomFromInterval(0, colors.length - 1)];
       }
@@ -35,7 +35,7 @@ export default function Marquee() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   function prefersReducedMotion() {
-    var media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let media = window.matchMedia("(prefers-reduced-motion: reduce)");
     return media && media.matches;
   }
   function stopScrolling() {

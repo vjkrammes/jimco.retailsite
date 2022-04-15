@@ -84,9 +84,9 @@ export default function PlaceOrderPage() {
   }
 
   useEffect(() => {
-    var total = 0;
+    let total = 0;
     if (cart && cart.items && cart.items.length > 0) {
-      for (var i = 0; i < cart.items.length; i++) {
+      for (let i = 0; i < cart.items.length; i++) {
         total += cart.items[i].price * cart.items[i].quantity;
       }
     }
