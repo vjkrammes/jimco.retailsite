@@ -57,7 +57,7 @@ export default function OrderDetail({ order }: Props) {
             <div className="od__detailcontainer">
               <div className="od__gridheader od__detailgrid">
                 <span>&nbsp;</span>
-                <span>#</span>
+                <span>Qty</span>
                 <span>Item</span>
                 <span className="od__pullright">Price</span>
               </div>
