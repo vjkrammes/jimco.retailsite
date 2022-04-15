@@ -13,15 +13,16 @@ import CheckoutPage from "./CheckoutPage/CheckoutPage";
 import ContactPage from "./ContactPage/ContactPage";
 import DisclaimerPage from "./DisclaimerPage/DisclaimerPage";
 import MainPage from "./MainPage/MainPage";
+import MyOrdersPage from "./MyOrdersPage/MyOrdersPage";
 import NotFoundPage from "./NotFoundPage/NotFoundPage";
+import OrderCreatedPage from "./OrderCreatedPage/OrderCreatedPage";
+import PlaceOrderPage from "./PlaceOrderPage/PlaceOrderPage";
 import ProductPage from "./ProductPage/ProductPage";
 import SearchPage from "./SearchPage/SearchPage";
 // interfaces
 import { ICategory } from "../Interfaces/ICategory";
+// miscellaneous
 import AlertPopup from "./AlertPopup/AlertPopup";
-import PlaceOrderPage from "./PlaceOrderPage/PlaceOrderPage";
-import OrderCreatedPage from "./OrderCreatedPage/OrderCreatedPage";
-import MyOrdersPage from "./MyOrdersPage/MyOrdersPage";
 
 export default function App() {
   const [category, setCategory] = useState<ICategory>(null!);
