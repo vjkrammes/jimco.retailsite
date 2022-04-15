@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { MdHome } from "react-icons/md";
+import { TiInfoLarge } from "react-icons/ti";
 import "./ArchitecturePage.css";
 
 export default function ArchitecturePage() {
+  const navigate = useNavigate();
   return (
     <div className="architecturepage">
       <h3 className="archheader">JimCo Retail Site Architecture</h3>
@@ -11,12 +14,16 @@ export default function ArchitecturePage() {
         className="centerimage"
       />
       <div className="buttoncontainer">
-        <div className="homebutton">
-          <Link to="/">Home</Link>
-        </div>
-        <div className="homebutton">
-          <Link to="/About">About</Link>
-        </div>
+        <button className="a__button" onClick={() => navigate("/")}>
+          <span>
+            <MdHome /> Home
+          </span>
+        </button>
+        <button className="a__button" onClick={() => navigate("/About")}>
+          <span>
+            <TiInfoLarge /> About
+          </span>
+        </button>
       </div>
     </div>
   );

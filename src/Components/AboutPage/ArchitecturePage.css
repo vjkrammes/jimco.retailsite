@@ -12,9 +12,25 @@
 }
 
 .buttoncontainer {
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+
+.a__button {
+  padding: 3px 5px;
+  border: 1px solid var(--black-color);
+  border-radius: 5px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.a__button:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  box-shadow: 3px 3px 5px var(--dark-color);
 }
 
 .centerimage {
