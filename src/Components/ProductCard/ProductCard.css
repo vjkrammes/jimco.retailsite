@@ -83,6 +83,10 @@
   border-top: 1px solid var(--faded-border-color);
 }
 
+.pc__alignleft {
+  min-width: 64px;
+}
+
 .pc__lowstock {
   font-style: italic;
   font-weight: 700;

@@ -1,4 +1,4 @@
-import { Alert, AlertColor, Collapse } from "@mui/material";
+import { Alert, AlertColor } from "@mui/material";
 import { useAlert } from "../../Contexts/AlertContext";
 
 function getSeverity(sev: string): AlertColor {

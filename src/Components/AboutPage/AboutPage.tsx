@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./AboutPage.css";
 
 export default function AboutPage() {
+  const navigate = useNavigate();
   return (
     <div className="aboutpage">
       <h3 className="aboutheader">About the JimCo Retail Site</h3>
@@ -120,9 +121,9 @@ export default function AboutPage() {
           {<Link to="https://www.json.org/json-en.html">JSON</Link>} library.
         </li>
       </ul>
-      <div className="homebutton">
-        <Link to="/">Home</Link>
-      </div>
+      <button className="ap__homebutton" onClick={() => navigate("/")}>
+        Home
+      </button>
     </div>
   );
 }

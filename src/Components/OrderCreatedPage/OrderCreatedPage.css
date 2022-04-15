@@ -1,27 +1,22 @@
-.disclaimerpage {
-  width: 100%;
-  margin: 0;
+.ordercreatedpage {
+  overflow: scroll;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  width: 100%;
 }
 
-.disclaimerheader {
-  margin-top: 1rem;
-  text-align: center;
+.ocp__heading {
   border: 3px solid var(--black-color);
+  font-weight: 700;
+  font-size: 1.25rem;
   background: linear-gradient(to right, lightgreen, lightblue);
-  box-shadow: 3px 3px 5px var(--dark-color);
-  margin-bottom: 2rem;
-}
-
-.fixedfont {
-  font-family: "Space Mono", "Courier New", Courier, monospace;
-  color: var(--dark-color);
-}
-
-.dp__homebutton {
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.ocp__button {
+  padding: 3px 5px;
   border: 1px solid var(--black-color);
   border-radius: 5px;
   background-color: var(--dark-color);
@@ -30,16 +25,16 @@
   max-width: 100px;
 }
 
-.dp__homebutton:hover {
+.ocp__button:hover {
   background-color: var(--white-color);
   color: var(--dark-color);
   box-shadow: 3px 3px 5px var(--dark-color);
 }
 
 @media screen and (min-width: 700px) {
-  .disclaimerpage {
+  .ordercreatedpage {
+    overflow: auto;
     max-width: 60rem;
     margin: 0 auto;
-    overflow: hidden;
   }
 }

@@ -21,3 +21,9 @@ export function getCookie(key: string): string {
   }
   return "";
 }
+
+export function deleteCookie(key: string) {
+  if (getCookie(key)) {
+    document.cookie = key + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;Path=/";
+  }
+}

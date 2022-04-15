@@ -22,7 +22,6 @@ export default function CartWidget() {
     if (cartcookie !== "") {
       var cart: ICart = JSON.parse(cartcookie);
       setCart({
-        signature: cart.signature,
         created: cart.created,
         updated: cart.updated,
         items: cart.items,

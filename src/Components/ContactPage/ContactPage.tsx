@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import appSettings from "../../static.json";
 import "./ContactPage.css";
 
 export default function ContactPage() {
+  const navigate = useNavigate();
   return (
     <div className="page">
       <h1 className="contactheading">JimCo Retail Contact Information</h1>
@@ -63,9 +64,9 @@ export default function ContactPage() {
           </table>
         </div>
       </div>
-      <div className="homebutton">
-        <Link to="/">Home</Link>
-      </div>
+      <button className="cp__homebutton" onClick={() => navigate("/")}>
+        <span>Home</span>
+      </button>
     </div>
   );
 }

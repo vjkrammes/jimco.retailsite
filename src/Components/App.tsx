@@ -19,6 +19,9 @@ import SearchPage from "./SearchPage/SearchPage";
 // interfaces
 import { ICategory } from "../Interfaces/ICategory";
 import AlertPopup from "./AlertPopup/AlertPopup";
+import PlaceOrderPage from "./PlaceOrderPage/PlaceOrderPage";
+import OrderCreatedPage from "./OrderCreatedPage/OrderCreatedPage";
+import MyOrdersPage from "./MyOrdersPage/MyOrdersPage";
 
 export default function App() {
   const [category, setCategory] = useState<ICategory>(null!);
@@ -40,6 +43,10 @@ export default function App() {
                   </>
                 }
               />
+              <Route
+                path="/ordercreated/:orderId"
+                element={<OrderCreatedPage />}
+              />
               <Route path="/product/:categoryId" element={<ProductPage />} />
               <Route path="/search/:searchText" element={<SearchPage />} />
               <Route path="/About" element={<AboutPage />} />
@@ -55,6 +62,24 @@ export default function App() {
               />
               <Route path="/Contact" element={<ContactPage />} />
               <Route path="/Disclaimer" element={<DisclaimerPage />} />
+              <Route
+                path="/MyOrders"
+                element={
+                  <>
+                    <AlertPopup />
+                    <MyOrdersPage />
+                  </>
+                }
+              />
+              <Route
+                path="/PlaceOrder"
+                element={
+                  <>
+                    <AlertPopup />
+                    <PlaceOrderPage />
+                  </>
+                }
+              />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>

@@ -6,7 +6,6 @@ import { ImPlus, ImMinus, ImBin } from "react-icons/im";
 import { toCurrency } from "../../Services/tools";
 import { ReadProduct } from "../../Services/ProductService";
 import { IProduct } from "../../Interfaces/IProduct";
-import { sha512 } from "js-sha512";
 import { setCookie } from "../../Services/CookieService";
 import AppSettings from "../../static.json";
 import { useAlert } from "../../Contexts/AlertContext";
@@ -32,10 +31,8 @@ export default function CheckoutPage() {
   }, []);
 
   function updateCart() {
-    const newhash = sha512(JSON.stringify(cart.items));
     const newCart = {
       ...cart,
-      signature: newhash,
       updated: new Date(),
     };
     setCart(newCart);
@@ -135,7 +132,7 @@ export default function CheckoutPage() {
         <div className="checkoutheader">Your Cart</div>
         <button
           type="button"
-          className="homebutton"
+          className="cop__homebutton"
           onClick={() => {
             navigate("/");
           }}>
@@ -220,8 +217,11 @@ export default function CheckoutPage() {
                   {toCurrency(cartTotal)}
                 </td>
                 <td className="ordercell">
-                  <button type="button" className="placeorderbutton">
-                    Buy
+                  <button
+                    type="button"
+                    className="placeorderbutton"
+                    onClick={() => navigate("/PlaceOrder")}>
+                    <span>Buy</span>
                   </button>
                 </td>
               </tr>
@@ -236,7 +236,7 @@ export default function CheckoutPage() {
         <div className="checkoutheader">Your Cart</div>
         <button
           type="button"
-          className="homebutton"
+          className="cop__homebutton"
           onClick={() => {
             navigate("/");
           }}>

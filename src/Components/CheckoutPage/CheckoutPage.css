@@ -1,9 +1,6 @@
 .checkoutpage {
   overflow: scroll;
-}
-
-.checkoutpage table {
-  border-collapse: collapse;
+  width: 100%;
 }
 
 .checkoutheader {
@@ -18,13 +15,14 @@
   background: linear-gradient(to right, lightgreen, lightblue);
 }
 
-.homebutton {
+.cop__homebutton {
+  margin-top: 1rem;
   min-width: 100px;
   min-height: 2rem;
   line-height: 1rem;
   padding: 3px 5px;
   border: 1px solid var(--black-color);
-  background-color: var(--accent-color);
+  background-color: var(--dark-color);
   border-radius: 5px;
   color: var(--white-color);
   text-decoration: none;
@@ -32,13 +30,13 @@
   cursor: pointer;
 }
 
-.homebutton:hover {
+.cop__homebutton:hover {
   background-color: var(--white-color);
-  color: var(--accent-color);
+  color: var(--dark-color);
   box-shadow: 3px 3px 5px var(--dark-color);
 }
 
-.homebutton span {
+.cop__homebutton span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -46,6 +44,15 @@
   display: flex;
   flex-direction: row;
   gap: 3px;
+}
+
+.checkoutpage table {
+  border-collapse: collapse;
+  width: 98%;
+}
+
+.checkoutpage table tr {
+  line-height: 2rem;
 }
 
 .nosmall {
@@ -67,8 +74,89 @@
   justify-content: center;
 }
 
+.lineitems tr {
+  border-top: 1px solid var(--dark-color);
+}
+
 .lineitems tr:last-of-type {
   border-top: 3px double var(--dark-color);
+}
+
+.idrequired {
+  line-height: 1.25rem;
+  font-style: italic;
+  color: var(--red-color);
+  border-right: 1px solid var(--red-color);
+}
+
+.actionbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.actionbutton {
+  border: 1px solid var(--black-color);
+  border-radius: 5px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  min-height: 24px;
+  min-width: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
+.actionbutton:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+}
+
+.actionbutton span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dangerbutton {
+  background-color: var(--red-color);
+}
+
+.dangerbutton:hover {
+  color: var(--red-color);
+}
+
+.placeorderbutton {
+  border: 1px solid var(--black-color);
+  border-radius: 5px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  max-height: 90%;
+  min-height: 28px;
+  min-width: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.placeorderbutton:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  box-shadow: 3px 3px 5px var(--dark-color);
+}
+
+.placeorderbutton span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cartempty {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 700px) {
@@ -78,11 +166,28 @@
     margin: 0 auto;
   }
 
+  .checkoutpage table {
+    margin-inline: 5px;
+  }
+
   .nosmall {
     display: unset;
   }
 
   .itemdescription {
     font-size: 100%;
+  }
+
+  .actionbar {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .actionbutton:hover {
+    box-shadow: 3px 3px 5px var(--dark-color);
+  }
+
+  .cartempty {
+    font-size: 3rem;
   }
 }

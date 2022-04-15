@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import NotFoundWidget from "../NotFoundWidget/NotFoundWidget";
 import "./NotFoundPage.css";
 
 export default function NotFoundPage() {
+  const navigate = useNavigate();
   return (
     <div className="notfoundpage">
-      <h1 className="notfoundheader">
-        The requested page or item was not found.
-      </h1>
-      <div className="homebutton">
-        <Link to="/">Home</Link>
-      </div>
+      <NotFoundWidget item="page or item" redirect="/" />
     </div>
   );
 }

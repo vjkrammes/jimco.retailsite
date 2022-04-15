@@ -26,7 +26,10 @@ export default function SideBarItem({
     if (category.id === "0") {
       return (
         <Link className="sidebarlink" to="/">
-          <div className="sidebaritem" style={{ ...bg, ...border }}>
+          <div
+            className="sidebaritem"
+            style={{ ...bg, ...border }}
+            onClick={() => categoryClick(null!)}>
             <img
               className="sidebaricon"
               src={"images/" + category.image}

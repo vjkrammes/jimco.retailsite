@@ -2,4 +2,94 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  width: 100%;
+}
+
+/* navbar here */
+/* based on code by Kevin Powell in this video: https://youtu.be/8QKOaTYvYUA */
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 0.25rem;
+  margin-left: 1rem;
+}
+
+nav a {
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle:checked ~ .sidebar nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ .sidebar nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background-color: var(--black-color);
+  height: 2px;
+  width: 2rem;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+@media screen and (min-width: 700px) {
+  nav {
+    all: unset;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
 }

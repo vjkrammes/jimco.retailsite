@@ -11,9 +11,11 @@
   --base-color: hsl(128 49% 51%);
   --accent-color: hsl(140 71% 29%);
   --dark-color: hsl(150 90% 16%);
+  --dark-color-faded: hsl(150 90% 16% / 0.5);
   --black-color: hsl(164 100% 6%);
   --white-color: hsl(165 100% 94%);
   --faded-border-color: rgba(0, 0, 0, 0.2);
+  --red-color: hsl(347.61 73.6% 50.98%);
 }
 
 html,
@@ -54,24 +56,4 @@ main .body {
 
 .icon-loading {
   animation: spin 1.5s linear infinite;
-}
-
-.homebutton {
-  margin-top: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.homebutton a {
-  padding: 3px 5px;
-  border: 1px solid var(--black-color);
-  border-radius: 5px;
-  background-color: var(--light-color);
-  color: var(--dark-color);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.homebutton a:hover {
-  box-shadow: 3px 3px 5px var(--dark-color);
 }

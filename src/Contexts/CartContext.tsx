@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from "react";
 import { ICart } from "../Interfaces/ICart";
 
 const CartContext = createContext<ICart>(emptyCart());
-const CartSetContext = createContext<
+const SetCartContext = createContext<
   React.Dispatch<React.SetStateAction<ICart>>
 >(null!);
 
@@ -16,19 +16,19 @@ export function CartProvider({ children }: Props) {
   const [cart, setCart] = useState<ICart>(emptyCart());
   return (
     <CartContext.Provider value={cart}>
-      <CartSetContext.Provider value={setCart}>
+      <SetCartContext.Provider value={setCart}>
         {children}
-      </CartSetContext.Provider>
+      </SetCartContext.Provider>
     </CartContext.Provider>
   );
 }
 
 export function useCart(): [
-  ICart,
-  React.Dispatch<React.SetStateAction<ICart>>
+  cart: ICart,
+  setCart: React.Dispatch<React.SetStateAction<ICart>>
 ] {
   const cart = useContext(CartContext);
-  const setCart = useContext(CartSetContext);
+  const setCart = useContext(SetCartContext);
   if (!setCart) {
     throw new Error("The CartProvider is missing");
   }
@@ -37,7 +37,6 @@ export function useCart(): [
 
 export function emptyCart(): ICart {
   return {
-    signature: "",
     created: new Date(),
     updated: new Date(),
     items: [],

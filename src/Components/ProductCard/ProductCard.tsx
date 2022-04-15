@@ -9,7 +9,6 @@ import { MdNotificationImportant } from "react-icons/md";
 import { ICart } from "../../Interfaces/ICart";
 import { useCart } from "../../Contexts/CartContext";
 import { setCookie } from "../../Services/CookieService";
-import { sha512 } from "js-sha512";
 import { useAlert } from "../../Contexts/AlertContext";
 
 function addToCart(
@@ -25,10 +24,7 @@ function addToCart(
   var existing = cart.items?.find((x) => x.productId === product.id);
   if (existing !== null && existing !== undefined) {
     existing.quantity += quantity;
-    const sig = sha512(JSON.stringify(cart.items));
-    console.log(sig);
     newCart = {
-      signature: sig,
       created: cart.created,
       updated: new Date(),
       items: cart.items,
@@ -43,9 +39,7 @@ function addToCart(
           ? product.price
           : product.currentPromotion.price,
     });
-    const sig = sha512(JSON.stringify(newitems));
     newCart = {
-      signature: sig,
       created: cart.created,
       updated: new Date(),
       items: newitems,

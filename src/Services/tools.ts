@@ -71,3 +71,29 @@ export function GenerateLoremIpsum(
   }
   return builder.join("");
 }
+
+export function statusDescription(
+  status: number,
+  capitalize: boolean = true
+): string {
+  switch (status) {
+    case 1:
+      return capitalize ? "Pending" : "pending";
+    case 2:
+      return capitalize ? "Open" : "open";
+    case 3:
+      return capitalize ? "Canceled by customer" : "canceled by customer";
+    case 4:
+      return capitalize ? "Canceled by store" : "canceled by store";
+    case 5:
+      return capitalize ? "In progress" : "in progress";
+    case 6:
+      return capitalize ? "Shipped" : "shipped";
+    case 7:
+      return capitalize ? "Back ordered" : "back ordered";
+    case 8:
+      return capitalize ? "Out of stock" : "out of stock";
+    default:
+      return capitalize ? "Unknown" : "unknown";
+  }
+}

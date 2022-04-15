@@ -21,7 +21,7 @@ export default function CountWidget({
         className="cw__button"
         title="Decrease Quantity"
         onClick={() => {
-          if (count > 0) {
+          if (count > 1) {
             setCount(count - 1);
           }
         }}>

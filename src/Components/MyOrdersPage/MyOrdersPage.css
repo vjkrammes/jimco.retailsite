@@ -1,0 +1,134 @@
+.myorderspage {
+  width: 100%;
+  overflow: scroll;
+}
+
+.mop__header {
+  width: 100%;
+  border: 3px solid var(--black-color);
+  background: linear-gradient(to right, lightblue, lightgreen);
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.mop__top {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--faded-border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.mop__topitem {
+  width: 100%;
+}
+
+.mop__topitemvalue {
+  width: 100%;
+}
+
+.mop__topitemvalue input {
+  width: 100%;
+}
+
+.mop__topbuttoncontainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.mop__button {
+  padding: 3px 5px;
+  border: 1px solid var(--black-color);
+  border-radius: 5px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.mop__button:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  box-shadow: 3px 3px 5px var(--dark-color);
+}
+
+.mop__orderheader {
+  text-align: center;
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.mop__orderitem {
+  display: grid;
+  grid-template-columns: 20px repeat(4, 1fr) 32px;
+  align-items: center;
+  border-bottom: 1px solid var(--faded-border-color);
+}
+
+.mop__orderitemheader {
+  font-weight: 700;
+}
+
+.mop__orderitemcell {
+  display: flex;
+  align-items: center;
+}
+
+.mop__orderbuttoncell {
+  justify-content: center;
+}
+
+.mop__viewbutton {
+  font-size: 75%;
+  max-width: 32px;
+  max-height: 20px;
+}
+
+.mop__homebutton {
+  margin-top: 10px;
+}
+
+/* dialog stuff here */
+
+.mop__modal {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px var(--dark-color);
+  max-width: 60rem;
+}
+
+.mop__modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 700px) {
+  .myorderspage {
+    max-width: 60rem;
+    margin: 0 auto;
+    overflow: auto;
+  }
+
+  .mop__header {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mop__top {
+    margin-bottom: 1rem;
+  }
+
+  .mop__topitem {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mop__topitemlabel {
+    flex: 0.2;
+  }
+
+  .mop__topitemvalue {
+    flex: 0.8;
+  }
+}

@@ -16,6 +16,7 @@ type Props = {
 export default function Sidebar({ category, setCategory }: Props) {
   const [status, setStatus] = useState("loading");
   const [categories, setCategories] = useState<ICategory[] | null>(null);
+  const [showNav, setShowNav] = useState(true);
   const home: ICategory = {
     id: "0",
     name: "Home",
@@ -36,12 +37,15 @@ export default function Sidebar({ category, setCategory }: Props) {
       });
   }, []);
 
+  function toggleNav() {
+    setShowNav(!showNav);
+  }
+
   if (status === "error") {
     return (
       <div className="sidebar" title="Error retrieving Categories">
         <h1>
-          <MdError />
-          &nbsp;Error
+          <MdError /> Error
         </h1>
       </div>
     );
@@ -49,28 +53,47 @@ export default function Sidebar({ category, setCategory }: Props) {
   if (status === "loading") {
     return (
       <p>
-        <Spinner />
-        &nbsp;Loading...
+        <Spinner /> Loading...
       </p>
     );
   }
   return (
-    <div className="sidebar">
-      <SideBarItem
-        key="0"
-        category={home}
-        setSelectedCategory={() => {}}
-        isCurrent={false}
+    <>
+      <input
+        type="checkbox"
+        className="nav-toggle"
+        id="nav-toggle"
+        defaultChecked={showNav}
+        onChange={toggleNav}
       />
-      {categories &&
-        categories.map((c) => (
-          <SideBarItem
-            key={c.id}
-            category={c}
-            setSelectedCategory={setCategory}
-            isCurrent={c === category}
-          />
-        ))}
-    </div>
+      <div className="sidebar">
+        <nav>
+          <ul>
+            <li key={"0"}>
+              <SideBarItem
+                key="0"
+                category={home}
+                setSelectedCategory={setCategory}
+                isCurrent={category === null}
+              />
+            </li>
+            {categories &&
+              categories.map((c) => (
+                <li key={c.id}>
+                  <SideBarItem
+                    key={c.id}
+                    category={c}
+                    setSelectedCategory={setCategory}
+                    isCurrent={c === category}
+                  />
+                </li>
+              ))}
+          </ul>
+        </nav>
+        <label htmlFor="nav-toggle" className="nav-toggle-label">
+          <span></span>
+        </label>
+      </div>
+    </>
   );
 }

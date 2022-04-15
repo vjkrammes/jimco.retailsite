@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./DisclaimerPage.css";
 
 export default function DisclaimerPage() {
+  const navigate = useNavigate();
   return (
     <div className="disclaimerpage">
       <h2 className="disclaimerheader">Disclaimer</h2>
@@ -29,9 +30,9 @@ export default function DisclaimerPage() {
       </ol>
       <p>Just in case there was any doubt or confusion.</p>
       <p>Thank you.</p>
-      <div className="homebutton">
-        <Link to="/">Home</Link>
-      </div>
+      <button className="dp__homebutton" onClick={() => navigate("/")}>
+        <span>Home</span>
+      </button>
     </div>
   );
 }

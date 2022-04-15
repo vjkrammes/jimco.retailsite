@@ -7,15 +7,20 @@
 import { AlertColor } from "@mui/material";
 import { createContext, useContext, useState } from "react";
 
-const ALERT_TIME = 2500;
+const DEFAULT_ALERT_TIME = 2500;
 const initialState = {
   text: "",
   type: "",
+  alertTime: DEFAULT_ALERT_TIME,
 };
 
 const AlertContext = createContext({
   ...initialState,
-  setAlert: (text: string, type: AlertColor) => {},
+  setAlert: (
+    text: string,
+    type: AlertColor,
+    alertTime: number = DEFAULT_ALERT_TIME
+  ) => {},
 });
 
 type Props = {
@@ -25,16 +30,22 @@ type Props = {
 export const AlertProvider = ({ children }: Props) => {
   const [text, setText] = useState<string>("");
   const [type, setType] = useState<string>("");
-  const setAlert = (text: string, type: AlertColor) => {
+  const [alertTime, setAlertTime] = useState<number>(DEFAULT_ALERT_TIME);
+  const setAlert = (
+    text: string,
+    type: AlertColor,
+    alertTime: number = DEFAULT_ALERT_TIME
+  ) => {
     setText(text);
     setType(type);
+    setAlertTime(alertTime);
     setTimeout(() => {
       setText("");
       setType("");
-    }, ALERT_TIME);
+    }, alertTime);
   };
   return (
-    <AlertContext.Provider value={{ text, type, setAlert }}>
+    <AlertContext.Provider value={{ text, type, alertTime, setAlert }}>
       {children}
     </AlertContext.Provider>
   );

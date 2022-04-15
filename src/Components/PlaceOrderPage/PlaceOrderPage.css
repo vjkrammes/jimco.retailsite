@@ -1,0 +1,149 @@
+.placeorderpage {
+  overflow: scroll;
+  width: 100%;
+}
+
+.placeorderheader {
+  border: 3px solid var(--black-color);
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, lightblue, lightgreen);
+}
+
+.placeordersummary {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-inline: 5px;
+  border: 1px solid var(--black-color);
+  padding: 0px 5px;
+}
+
+.summaryitem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.summaryitem span:last-of-type {
+  font-weight: 700;
+  text-align: center;
+}
+
+form {
+  border: 1px dotted var(--dark-color);
+  padding: 5px;
+}
+
+.redstar {
+  font-size: 0.75rem;
+  color: var(--red-color);
+  vertical-align: super;
+}
+
+.po__banner {
+  text-align: center;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.po__formrow {
+  display: flex;
+  flex-direction: column;
+}
+
+.po__formitem {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+.po__formitem label {
+  flex: 0.3;
+}
+
+.po__formitem input,
+.po__formitem select {
+  flex: 0.7;
+}
+
+.po__formitem select {
+  margin-left: -3px;
+}
+
+.po__buttoncontainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+}
+
+.po__formbutton {
+  padding: 3px 5px;
+  border: 1px solid var(--black-color);
+  border-radius: 5px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  font-size: 75%;
+}
+
+.po__formbutton:last-child {
+  justify-self: flex-end;
+}
+
+.po__formbutton:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  box-shadow: 3px 3px 5px var(--dark-color);
+}
+
+.po__disabledbutton {
+  cursor: not-allowed;
+  background-color: gray;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 700px) {
+  .placeorderpage {
+    overflow: auto;
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
+  .placeordersummary {
+    margin-bottom: 1rem;
+  }
+
+  .summaryitem {
+    flex-direction: row;
+  }
+
+  .po__formrow {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .po__formitem {
+    flex: 1;
+  }
+
+  .po__cardSelect {
+    width: 100%;
+    float: left;
+  }
+
+  .po__formbutton {
+    font-size: 100%;
+  }
+}

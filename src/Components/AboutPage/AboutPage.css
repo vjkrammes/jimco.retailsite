@@ -30,6 +30,21 @@
   color: var(--dark-color);
 }
 
+.ap__homebutton {
+  border: 1px solid var(--black-color);
+  border-radius: 5px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  padding: 3px 5px;
+  cursor: pointer;
+}
+
+.ap__homebutton:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  box-shadow: 3px 3px 5px var(--dark-color);
+}
+
 @media screen and (min-width: 700px) {
   .aboutpage {
     overflow: hidden;
