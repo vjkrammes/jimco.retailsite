@@ -4,7 +4,7 @@
     "South Niflheim, TN, 37999",
     "In the Towne Centre Mall"
   ],
-  "apiBase": "https://localhost:5011/api/v1/",
+  "apiBase": "https://jimcoapi.azurewebsites.net/api/v1/",
   "cartCookie": "JimCoRetailCart",
   "emailAddresses": [
     {
