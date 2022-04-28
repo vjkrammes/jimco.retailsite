@@ -50,9 +50,9 @@ export default function AboutPage() {
           (DTOs) as well as for enforcing business logic.
         </li>
         <li className="aboutitem">
-          The Data Services layer, a .NET 6 class library written in C# version
-          10. This layer is responsible for getting data into and out of the
-          database. It uses Dapper as a minimal ORM.
+          The Data Repository layer, a .NET 6 class library written in C#
+          version 10. This layer is responsible for getting data into and out of
+          the database. It uses Dapper as a minimal ORM.
         </li>
         <li className="aboutitem">
           A{" "}
