@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./AboutPage.css";
 
 export default function AboutPage() {
@@ -16,19 +16,16 @@ export default function AboutPage() {
       <p>
         The site consists of a front-end web site and a back-end API. The API is
         written in{" "}
-        {
-          <Link to="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">
-            C#
-          </Link>
-        }{" "}
-        version 10 using{" "}
-        {<Link to="https://en.wikipedia.org/wiki/.NET">.NET</Link>} 6. The front
-        end is written in{" "}
-        {<Link to="https://www.typescriptlang.org/">TypeScript</Link>} +{" "}
-        {<Link to="https://reactjs.org/docs/introducing-jsx.html">JSX</Link>}{" "}
-        using React version 18 and React-router version 6.3. It is divided up
-        into distinct layers (for an overall architecture diagram, click{" "}
-        {<Link to="/Architecture">here</Link>}):
+        <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">
+          C#
+        </a>{" "}
+        version 10 using <a href="https://en.wikipedia.org/wiki/.NET">.NET</a>{" "}
+        6. The front end is written in{" "}
+        <a href="https://www.typescriptlang.org/">TypeScript</a> +{" "}
+        <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a> using
+        React version 18 and React-router version 6.3. It is divided up into
+        distinct layers (for an overall architecture diagram, click{" "}
+        <a href="/Architecture">here</a>):
       </p>
       <ul className="aboutlist">
         <li className="aboutitem">
@@ -42,11 +39,9 @@ export default function AboutPage() {
           The Data Services layer, a .NET 6 class library written in C# version
           10. This layer is the interface between the API and the Data Access
           layers. It is responsible for translation between entity objects and{" "}
-          {
-            <Link to="https://en.wikipedia.org/wiki/Data_transfer_object">
-              Data Transfer Objects
-            </Link>
-          }{" "}
+          <a href="https://en.wikipedia.org/wiki/Data_transfer_object">
+            Data Transfer Objects
+          </a>{" "}
           (DTOs) as well as for enforcing business logic.
         </li>
         <li className="aboutitem">
@@ -56,11 +51,9 @@ export default function AboutPage() {
         </li>
         <li className="aboutitem">
           A{" "}
-          {
-            <Link to="https://www.microsoft.com/en-us/sql-server/sql-server-2019">
-              Microsoft SQL
-            </Link>
-          }{" "}
+          <a href="https://www.microsoft.com/en-us/sql-server/sql-server-2019">
+            Microsoft SQL
+          </a>{" "}
           database to store the data.
         </li>
       </ul>
@@ -84,41 +77,33 @@ export default function AboutPage() {
       </p>
       <ul className="aboutlist">
         <li className="aboutitem">
-          {<Link to="https://reactjs.org/">React</Link>}, React-router,
-          React-icons
+          <a href="https://reactjs.org/">React</a>, React-router, React-icons
         </li>
         <li className="aboutitem">
-          {
-            <Link to="https://github.com/stefanprodan/AspNetCoreRateLimit">
-              ASPNetCoreRateLimit
-            </Link>
-          }
+          <a href="https://github.com/stefanprodan/AspNetCoreRateLimit">
+            ASPNetCoreRateLimit
+          </a>
           , a library used to limit the rate of incoming requests to the API to
           minimize denial-of-service attacks.
         </li>
         <li className="aboutitem">
-          {<Link to="https://hashids.org/net/">Hashids.net</Link>}, a library
-          used to obfuscate entity key values in the data transfer objects.
+          <a href="https://hashids.org/net/">Hashids.net</a>, a library used to
+          obfuscate entity key values in the data transfer objects.
         </li>
         <li className="aboutitem">
-          {<Link to="https://github.com/DapperLib/Dapper">Dapper</Link>}, a
-          minimal{" "}
-          {
-            <Link to="https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping">
-              ORM
-            </Link>
-          }{" "}
+          <a href="https://github.com/DapperLib/Dapper">Dapper</a>, a minimal{" "}
+          <a href="https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping">
+            ORM
+          </a>{" "}
           built over{" "}
-          {
-            <Link to="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ado-net-overview">
-              ADO.Net
-            </Link>
-          }
+          <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ado-net-overview">
+            ADO.Net
+          </a>
           , used to get entity objects into and out of the database.
         </li>
         <li className="aboutitem">
-          {<Link to="https://www.newtonsoft.com/json">Json.NET</Link>}, a{" "}
-          {<Link to="https://www.json.org/json-en.html">JSON</Link>} library.
+          <a href="https://www.newtonsoft.com/json">Json.NET</a>, a{" "}
+          <a href="https://www.json.org/json-en.html">JSON</a> library.
         </li>
       </ul>
       <button className="ap__homebutton" onClick={() => navigate("/")}>
